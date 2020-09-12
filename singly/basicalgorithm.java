@@ -10,7 +10,7 @@ class LinkedList {
     } 
   
     /* Inserts a new Node at front of the list. */
-    public Node insert_at_front(Node head, int data) 
+    public Node addFirst(Node head, int data) 
     { 
         Node node = new Node(data); 
         if(head==null)
@@ -22,7 +22,7 @@ class LinkedList {
         return head;
     } 
     
-    public Node insert_at_tail(Node head, int data){
+    public Node addLast(Node head, int data){
       Node node = new Node(data);
       if(head==null)
         head = node;
@@ -35,7 +35,7 @@ class LinkedList {
     }
   
     /* Inserts a new node after the given prev_node. */
-    public Node insert_at_position(Node head, int data, int position) { 
+    public Node addAtPosition(Node head, int data, int position) { 
         Node new_node = new Node(data);
         if(head==null){
             head = new_node;
@@ -53,7 +53,7 @@ class LinkedList {
             return head;
     } 
     
-    public Node delete_head(Node head, int data){
+    public Node removeFirst(Node head, int data){
       if(head==null)
         return null;
       
@@ -63,7 +63,7 @@ class LinkedList {
        return head;
     }
     
-    public Node delete_tail(Node head, int data){
+    public Node removeLast(Node head, int data){
       if(head==null) return null;
       if(head.next==null) return null;
       
@@ -77,7 +77,7 @@ class LinkedList {
   
     /* This function prints contents of linked list starting from 
         the given node */
-    public void print_elements(Node head) { 
+    public void display(Node head) { 
         while (head != null) { 
             System.out.print(head.data+" "); 
             head = head.next; 
